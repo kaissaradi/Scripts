@@ -1,2 +1,2 @@
-# CS290-1
-CS290 intro assignment
+# Local Scripts
+A repo containing my local scripts for backup
