@@ -1,0 +1,27 @@
+section{
+
+    font-weight:normal;
+    font-style:italic;
+   }
+   table{
+     border-style:solid;
+   }
+   th{
+     border-style:solid;
+   }
+   td{
+     border-style:solid;
+   }
+   #outer{
+     background-color:pink;
+     width:75%;
+     height:40px;
+   }
+   #inner{
+     background-color:lightblue;
+     width:56%;
+     height:20px;
+     position:relative;
+     top:10px;
+     left:18.75%;
+   }

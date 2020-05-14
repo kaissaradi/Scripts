@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>title</title>
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+   <!--   6X6 Table which displays the win/loss data for 5 players       -->
+    <table>
+        <caption>Who wins? Cell content indicates the status of the row entry</caption>
+        <thead>
+         <tr>
+          <th> 
+          <th> Godzilla
+          <th> Batman
+          <th> Shaq
+          <th> Aaron Carter
+          <th> Abe Lincoln
+        <tbody>
+         <tr>
+          <th> <section>Godzilla</section>
+          <td> Win
+          <td> Loss
+          <td> Win
+          <td> Win
+          <td> Loss
+         <tr>
+          <th> <section>Batman</section>
+          <td> Loss
+          <td> Loss
+          <td> Win
+          <td> Loss
+          <td> Loss
+        <tr>
+          <th> <section>Shaq</section>
+          <td> Win
+          <td> Win
+          <td> Win
+          <td> Win
+          <td> Loss
+         <tr>
+          <th> <section>Aaron Carter</section>
+          <td> Loss
+          <td> Loss
+          <td> Loss
+          <td> Loss
+          <td> Loss
+         <tr>
+          <th> <section>Abe Lincol</section>
+          <td> Win
+          <td> Win
+          <td> Win
+          <td> Tie
+          <td> Win
+         <tr>
+          <th colspan = '2'> <section>Footer 1</section>
+          <th colspan = '4'> <section>Footer 2</section>
+          
+    </table>
+    <!--   Unordered list with 3 things       --> 
+    <ul>
+      <li>Best Language: Python</li>
+      <li>Wackyiest Language: Haskell</li>
+      <li>SEGFAULT Test Language: C</li>
+    </ul>
+    <!--   Blue Div centered within Pink div       -->
+    <div align = left id = "outer" class = "outer-content">
+      <div align = center id = "inner" class = "inner-content">
+      Some content here
+      </div>
+    </div>
+    <!--   Form which uses a Get       --> 
+    <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="get">
+      <fieldset>
+          <legend>Some GET Data</legend>
+          <fieldset>
+            <label>Text Here:
+                <input type="text" name="text_input" size="10">
+            </label>
+          </fieldset>
+          <br />
+          <fieldset>
+            <label>Number Here:
+                <input type="number" name="number_input" size="10">
+            </label>
+          </fieldset>
+          <br />
+          <fieldset>
+            <label>Password Here:
+                <input type="password" name="password_input" size="10">
+            </label>
+          </fieldset>
+          <br />
+          <fieldset>
+            <p>Select Between:
+              <br />
+              <label>
+                  <input type="radio" name="Candy"/>Snickers</label>
+              <br />
+              <label>
+                  <input type="radio" name="Candy"/>Skittles</label>
+              <br />
+              <label>
+                  <input type="radio" name="Candy"/>Mentos</label>
+              <br />
+            </p>
+            <input type="submit" value="Submit" />
+          </fieldset>
+      </fieldset>
+    </form>
+     <!--   Form which uses a Post       --> 
+    <form action=" http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="post">
+      <fieldset>
+        <legend>Some POST Data</legend>
+        <fieldset>
+          <label>Text Here:
+              <input type="text" name="text_input" size="10">
+          </label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <label>Number Here:
+              <input type="number" name="number_input" size="10">
+          </label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <label>Password Here:
+              <input type="password" name="password_input" size="10">
+          </label>
+        </fieldset>
+        <br />
+        <fieldset>
+          <p>Select Between:
+            <br />
+            <label>
+                <input type="radio" name="Selection"/>Snickers</label>
+            <br />
+            <label>
+                <input type="radio" name="Selection"/>Skittles</label>
+            <br />
+            <label>
+                <input type="radio" name="Selection"/>Mentos</label>
+            <br />
+          </p>
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </fieldset>
+  </form>
+ </body>
+</html>

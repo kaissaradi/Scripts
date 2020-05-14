@@ -1,0 +1,12 @@
+Assignment 2 Part 2         by: Kais Saradi
+
+1. The total cost units can be calclated as follows:
+total = 8 + 9 + 7 + 17 + 15 + 33 + 17 = 106 units
+average = 106 / 50 = 2.12 units
+This means the average big-Oh complexity is O(1)+ 
+
+2. The total cost units can be calclated as follows:
+total = 8 + 9 + 1 + 11 + 1 + 13 + 1 + 15 + 1 + 17 + 1 + 19 + 1 + 21 + 1 + 23 + 1 + 25 + 1 + 27 + 1 + 29 + 1 + 31 + 1 + 33 + 1 + 35 + 1 + 37 + 1 + 39 + 1 + 41 + 1 + 43 + 1 + 45 + 1 + 47 + 1 + 49 + 1
+= 638 units
+average = 638 / 50 = 12.76 units
+This means the average big-Oh complexity is O(n)
