@@ -5,10 +5,12 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 #download apt packages
 sudo apt update 
 sudo apt upgrade -y
-sudo apt install  gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
+sudo apt install  zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
 #install snap packages
 sudo snap install spotify --classic code -y
 #remove default packages 
 sudo apt remove firefox -y
 sudo apt autoremove -y
 rm -rf google-chrome-stable_current_amd64.deb
+
+#configure settings and defaults, setup zshrc, vimrc, bash
