@@ -3,12 +3,12 @@
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 #download apt packages
-sudo apt update 
+sudo apt update
 sudo apt upgrade -y
-sudo apt install  zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
+sudo apt install npm xterm libpangox-1.0-0 neovim zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
 #install snap packages
 sudo snap install spotify --classic code -y
-#remove default packages 
+#remove default packages
 sudo apt remove firefox -y
 sudo apt autoremove -y
 rm -rf google-chrome-stable_current_amd64.deb
