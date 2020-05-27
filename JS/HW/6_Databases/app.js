@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var mysql = require('mysql'); 
 
 //setting connection on port and create connection pool
+app.set('view engine', 'handlebars');
 app.set('port', 3000);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -14,7 +15,7 @@ app.engine('handlebars', handlebars.engine);
 var pool = mysql.createPool({
     connectionLimit: 10,
     host  : 'localhost',
-    user  : 'kais',
+    user  : 'root',
     password: 'admin',
     database: 'student'
   });
@@ -40,7 +41,7 @@ app.get('/reset-table',function(req,res,next){
 
 //main route to send data from the database table
 app.get("/", function(req, res, next) {
-  if(req.query.length == 0){
+  if(req.query.length == undefined){
     pool.query('SELECT * FROM workouts', function(err,rows){
       if(err){
         next(err);
@@ -51,7 +52,7 @@ app.get("/", function(req, res, next) {
       res.render('home', context);
     });
   }
-  if(req.query.length ==1){
+  else if(req.query.length == 1){
     pool.query("DELETE FROM workouts WHERE id = ?",[req.query.id], function(err, result) {
       if(err){
           next(err);
