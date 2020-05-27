@@ -1,2 +1,36 @@
-<h1>Results:</h1>
-<p>{{results}}</p>
+  <h1>Fill out the form to add an Excersice to the Database</h1>
+  <fieldset>
+    <legend>Add an Excersice</legend>
+    <form id="newEntry">
+        Name:
+        <input type="text" name="workout" id="workout"><br>
+        Reps:
+        <input type="number" name="reps" id="reps"><br>
+        Weight:
+        <input type="number" name="weight" id="weight"><br>
+        Date:
+        <input type="date" name="date" id="date"><br>
+        Units:
+        <select id="units">
+          <option value="1">LBS</option>
+          <option value="0">KG</option>
+        </select><br>
+        <input type="submit" name="addButton" value = "Add" id="addButton">
+    </form>
+  </fieldset>
+  <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Reps</th>
+              <th>Weight</th>
+              <th>Date</th>
+              <th>Units</th>
+          </tr>
+      </thead>
+      <tbody id="sqlTable">
+
+      </tbody>
+  </table>
+
+<script src="./script.js"><{{!}}/script>

@@ -14,8 +14,8 @@ app.engine('handlebars', handlebars.engine);
 var pool = mysql.createPool({
     connectionLimit: 10,
     host  : 'localhost',
-    user  : 'student',
-    password: 'default',
+    user  : 'kais',
+    password: 'admin',
     database: 'student'
   });
 
