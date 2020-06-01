@@ -39,7 +39,6 @@ document.getElementById('addButton').addEventListener('click', function(event){
   req.open("GET",payload, true);                 
   req.addEventListener('load', function(){                       
     if(req.status >= 200 && req.status < 400){
-      
       var response = JSON.parse(req.responseText);       
       for(obj in response){ //for each object in the response list, add a row with the name, rep, weight, date, and units
         addRow(obj[0],obj[1],obj[2],obj[3],obj[4],obj[5]);

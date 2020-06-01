@@ -1,0 +1,20 @@
+#!/bin/bash
+#download apt packages
+sudo apt update
+sudo apt upgrade -y
+sudo apt install zsh-syntax-highlighting zsh-autosuggestions software-properties-common apt-transport-https wget npm xterm libpangox-1.0-0 neovim zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
+#download third party apps (chrome, vscode)
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+"deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update
+sudo apt install code -y
+#install snap packages
+sudo snap install spotify -y
+#remove default packages
+sudo apt remove firefox -y
+sudo apt autoremove -y
+rm -rf google-chrome-stable_current_amd64.deb
+sudo apt update
+sudo apt upgrade
