@@ -7,6 +7,10 @@ xterm*vt100*geometry: 100x25
 xterm*saveLines: 2000
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 xterm*termName: xterm-color
+xterm*selectToClipboard: true
+XTerm*vt100.translations: #override \
+Shift Ctrl <Key> C: copy-selection(PRIMARY) \n\
+Shift Ctrl <Key> V: insert-selection(PRIMARY)
 xterm*foreground: rgb:ab/b2/bf
 xterm*background: rgb:1e/21/27
 xterm*color0: rgb:00/00/00
@@ -17,11 +21,15 @@ xterm*color4: rgb:61/af/ef
 xterm*color5: rgb:c6/78/dd
 xterm*color6: rgb:56/b6/c2
 xterm*color7: rgb:ab/b2/bf
-xterm*color8: rgb:5c/63/70
-xterm*color12: rgb:3f/78/f2
-xterm*color10: rgb:50/a1/4f
-xterm*color14: rgb:1/84/bc
-xterm*color9: rgb:e4/56/49
-xterm*color13: rgb:fc/54/fc
-xterm*color11: rgb:54/fc/fc
-xterm*color15: rgb:fc/fc/fc
+xterm*color8: rgb:00/00/00
+xterm*color9: rgb:e0/6b/74
+xterm*color10: rgb:98/c3/79
+xterm*color11: rgb:d1/9a/65
+xterm*color12: rgb:61/af/ef
+xterm*color13: rgb:c6/78/dd
+xterm*color14: rgb:56/b6/c2
+xterm*color15: rgb:ab/b2/bf
+xterm*ScrollBar: false
+XTerm.VT100.translations: #override \
+    Shift <Key>Up: scroll-back(1,line) \n\
+    Shift <Key>Down: scroll-forw(1,line)

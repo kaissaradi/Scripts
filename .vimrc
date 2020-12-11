@@ -2,8 +2,8 @@ syntax on
 
 set hidden
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set nu
@@ -14,7 +14,14 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-"
+set guicursor=n:block-Cursor
+set clipboard^=unnamed
+
+"cursors
+let &t_SI = "\<Esc>[5 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[1 q"
+
 " Give more space for displaying messages.
 set cmdheight=2
 
@@ -25,8 +32,8 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 "colorscheme gruvbox
