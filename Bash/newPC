@@ -2,7 +2,7 @@
 #download apt packages
 sudo apt update
 sudo apt upgrade -y
-sudo apt install zsh-syntax-highlighting zsh-autosuggestions software-properties-common apt-transport-https wget npm xterm libpangox-1.0-0 neovim zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
+sudo apt install ranger zsh-syntax-highlighting zsh-autosuggestions software-properties-common apt-transport-https wget npm xterm libpangox-1.0-0 neovim zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 putty filezilla -y
 #download third party apps (chrome, vscode)
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
