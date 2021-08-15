@@ -20,6 +20,7 @@ sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/v
 sudo apt update
 sudo apt install code -y
 git clone https://github.com/SpaceVim/SpaceVim.git ~/.SpaceVim
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 #install snap packages
 snap install spotify
@@ -37,6 +38,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 cp .vimrc .zshrc .Xresources ~/
 cp config.toml ~/.config/nu/
 cp init.toml ~/Spacevim.d/
+cp starship.toml ~/.config/
 
 #fix file formatting and source configurations
 cd
