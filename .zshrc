@@ -68,7 +68,10 @@ export ZSH=$HOME/.oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	vi-mode
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Enable colors and change prompt:
 autoload -U colors && colors
-PS1="%B%{$fg[yellow]%}[%{$fg[magenta]%}%~%{$fg[green]%}]%{$fg[blue]%}$%b "
+PS1="%B%{$fg[yellow]%}[%{$fg[magenta]%}%~%{$fg[green]%}]%{$fg[red]%}$%b "
 
 # History in cache directory:
 HISTSIZE=10000
@@ -166,12 +169,48 @@ bindkey -s '^o' 'lfcd\n'
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+# Common config settings from github
+
+# Aliases
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -la'
+alias mv='mv -i'
+alias rm='rm -i'
+alias cp='cp -i'
+alias ..='cd ..'
+#alias vi='vim'
+#alias vim='nvim'
+alias gs='git status'
+alias python='python3'
+alias cl='clear'
+alias fd='fdfind'
+alias bat='batcat'
+alias code='/mnt/c/Users/kaoss/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
+alias ex='/mnt/c/Windows/explorer.exe .'
+alias gitdesk='/mnt/c/Users/kaoss/AppData/Local/GitHubDesktop/./GitHubDesktop.exe'
+alias vi='nvim -u ~/.SpaceVim/vimrc'
+
+#WSL fix
+fix_wsl2_interop() {
+    for i in $(pstree -np -s $$ | grep -o -E '[0-9]+'); do
+        if [[ -e "/run/WSL/${i}_interop" ]]; then
+            export WSL_INTEROP=/run/WSL/${i}_interop
+        fi
+    done
+}
+
+
+#Exports
+export EDITOR=vim
+export HISTCONTROL=ignoreboth
+export PATH
+
+#macros
+#bindkey "set completion-ignore-case on"
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
+source ~/.bash_profile

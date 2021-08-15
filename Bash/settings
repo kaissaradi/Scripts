@@ -1,5 +1,0 @@
-#!/bin/bash
-#copy dot files to home folder
-cp .vimrc .zshrc .Xresources ~/
-xrdb -merge ~/.Xresources
-chsh -s $(which zsh)
