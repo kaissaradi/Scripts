@@ -2,7 +2,7 @@
 #download Ubuntu packages
 cd
 cd Downloads/
-sudo -i
+#sudo -i
 sudo apt update
 sudo apt upgrade -y
 sudo apt install dos2unix tmux curl fd-find ripgrep zsh-syntax-highlighting zsh-autosuggestions software-properties-common apt-transport-https wget npm xterm libpangox-1.0-0 neovim zsh tldr gnome-terminal redshift-gtk mysql-server nodejs python3 python3-pip putty filezilla snap -y
